@@ -1,0 +1,114 @@
+body,html{
+    margin: 0;
+    padding: 0
+}
+body{
+    background-color: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.clock-area{
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    border: 1px  #eeeeee solid;
+    position: relative;
+}
+
+.arrow{
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 0%;
+    transform: rotate(-90deg);
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    background: #eeeeee;
+}
+
+.hour-arrow{
+    height: 1.5px;
+    width: 27%;
+    left: 50%;
+}
+
+.minute-arrow{
+    height: 1.5px;
+    width: 38%;
+    left: 50%;
+}
+.second-arrow{
+    background: rgb(189, 31, 31);
+    height: 1px;
+    width: 45%;
+    left: 50%;
+}
+
+.black-point{
+    position: absolute;
+    background: black;
+    top: 49.5%;
+    border-radius: 100%;
+    width: 4px;
+    height: 4px;
+    left: 49.5%;
+}
+
+.current-time{
+    width: 30%;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-inline-start: 0 !important;
+}
+li{
+    font-family: 'Poiret One', cursive;
+    color: #eeeeee;
+    font-size: 2rem;
+    width: 100px;
+    letter-spacing: 5px;
+    list-style: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px){
+    .current-time{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .clock-area{
+        width: 350px;
+        height: 350px;
+    }
+    .current-time{
+        width: 50%;
+    }
+    li{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .current-time{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 380px){
+    .clock-area{
+        width: 250px;
+        height: 250px;
+    }
+    li{
+        font-size: 1.5rem;
+    }
+}
